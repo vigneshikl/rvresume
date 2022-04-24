@@ -1,0 +1,49 @@
+<div class="section" id="contact">
+    <div class="container">
+        <h3>Contact Information</h3>
+        <div class="card bg-secondary">
+            <div class="card-body text-center">
+                <h4 class="card-title">Vignesh Ramasamy</h4>
+                <div class="card-text">
+                    <p>+91 8883588428</p>
+                    <p>vigneshikl@gmail.com</p>
+                    <div class="container text-center ">
+                        <a href="https://www.facebook.com/vignesh.rgm/" class="fa fa-facebook" target="_blank"></a>
+                        <a href="https://twitter.com/ssaarraatthhii" class="fa fa-twitter"></a>
+                        <a href="https://github.com/vigneshikl" class="fa fa-github"></a>
+                        <a href="https://www.instagram.com/vignesh_ikl/" class="fa fa-instagram"></a>
+                    </div>
+                </div>
+            </div>
+        </div><br>
+        <hr>
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-md-8 col-md-offset-2 col-sm-offset-1">
+                <form [formGroup]="SignupForm" (ngSubmit)="onSubmit()">
+                    <div formGroupName="userData">
+                        <div class="form-group">
+                            <label for="username">Name</label>
+                            <input type="text" class="form-control" id="username" formControlName="username">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" formControlName="email">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Message</label>
+                            <textarea type="text" class="form-control" id="email" formControlName="email"></textarea>
+                        </div>
+                    </div>
+
+                    <span class="help-block" *ngIf="!SignupForm.valid && SignupForm.touched">
+                        please enter valid data
+                    </span>
+                    <br>
+                    <button class="btn btn-primary" type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
